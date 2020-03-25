@@ -2,12 +2,13 @@
 
 <hr>
 
-<%= @players.each do |player| %>
+<% @players.each do |player| %>
 <h2><%= player.name %></h2>
 <%= link_to "Aller voir", player_path(player) %>
-
-<hr>
-
+<%= link_to "Supprimer", player_path(player), method: :delete, data: {confirm: "Êtes-vous sur?"} %>
+<%= link_to "Editer", edit_player_path(player) %>
 <% end %>
-
 <hr>
+
+<%= link_to "Ajouter un nouveau joueur", new_player_path  %>
+
