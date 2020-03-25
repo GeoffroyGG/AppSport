@@ -1,0 +1,12 @@
+<h1>Les leagues</h1>
+
+<hr>
+
+<%= @leagues.each do |league| %>
+<h2><%= league.name %></h2>
+<%= "*" * league.stars %>
+<%= link_to "Aller voir", league_path(league) %>
+
+<hr>
+
+<% end %>

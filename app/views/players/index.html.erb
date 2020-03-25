@@ -1,0 +1,13 @@
+<h1>Les players</h1>
+
+<hr>
+
+<%= @players.each do |player| %>
+<h2><%= player.name %></h2>
+<%= link_to "Aller voir", player_path(player) %>
+
+<hr>
+
+<% end %>
+
+<hr>
