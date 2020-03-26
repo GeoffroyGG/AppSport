@@ -1,5 +1,4 @@
 class LeaguesController < ApplicationController
-
   def index
     @leagues = League.all
   end
@@ -24,6 +23,7 @@ class LeaguesController < ApplicationController
   def update
     @league = League.find(params[:id])
     @league.update(league_params)
+    redirect_to leagues_path
   end
 
   def destroy
