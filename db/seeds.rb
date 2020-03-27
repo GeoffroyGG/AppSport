@@ -8,8 +8,9 @@
 League.destroy_all
 Player.destroy_all
 
-League.create(name: 'COD20', stars: 4)
-League.create(name: 'LOL20', stars: 5)
+League.create(name: 'Call Of Duty', stars: 4)
+League.create(name: 'League Of Legend', stars: 5)
+League.create(name: 'World Of Warcraft', stars: 5)
 
 Player.create(name: 'Tchoob')
 Player.create(name: '100S')
