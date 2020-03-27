@@ -13,6 +13,7 @@ class LeaguesController < ApplicationController
 
   def create
     league = League.create(league_params)
+    league.save
     redirect_to league_path(league)
   end
 
@@ -28,7 +29,7 @@ class LeaguesController < ApplicationController
 
   def destroy
     @league = League.find(params[:id])
-    @league.destroy
+    @league.delete
     redirect_to leagues_path
   end
 

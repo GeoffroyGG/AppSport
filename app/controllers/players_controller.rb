@@ -13,7 +13,8 @@ class PlayersController < ApplicationController
   end
 
   def create
-    Player.create(player_params)
+    player = Player.create(player_params)
+    player.save
     redirect_to players_path
   end
 

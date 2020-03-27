@@ -8,7 +8,6 @@
 League.destroy_all
 Player.destroy_all
 
-
 League.create(name: 'COD20', stars: 4)
 League.create(name: 'LOL20', stars: 5)
 
