@@ -1,6 +1,21 @@
 body {
   color-background: E0E0CE;
-  font-family: Georgia;
+  font-family: Times Trebuchet MS, sans-serif;
   justify-content: center;
   text-align: center;
+}
+
+h1 {
+  font-family: Trebuchet MS, sans-serif;
+}
+
+.cards {
+display: flex;
+justify-content: center;
+}
+
+.card {
+padding: 15px;
+border-radius: 5px;
+margin: 8px;
 }
