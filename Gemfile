@@ -3,11 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+#front-end
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
 gem 'bootstrap', '~> 4.4.1'
-
-gem 'font-awesome-sass', '~> 5.6.1'
 
 gem 'better_errors'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

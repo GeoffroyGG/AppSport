@@ -218,6 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   better_errors
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.4.1)
