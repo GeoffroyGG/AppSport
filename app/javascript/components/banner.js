@@ -5,7 +5,7 @@ const loadDynamicBannerText = () => {
     strings: ["Win"],
     typeSpeed: 150,
     loop: true
-  });
+  });w
 }
 
 export { loadDynamicBannerText };
