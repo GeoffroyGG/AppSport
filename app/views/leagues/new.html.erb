@@ -1,5 +1,9 @@
 
-<%= form_for @league do |f| %>
+<hr>
+
+<hr>
+
+<%= simple_form_for @league do |f| %>
 
   <%= f.label :name, "Your league name" %>
   <%= f.text_field :name %>
@@ -10,4 +14,6 @@
   <%= f.submit %>
 
   <% end %>
+
+
 
