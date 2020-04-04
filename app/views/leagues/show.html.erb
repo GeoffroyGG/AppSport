@@ -1,6 +1,12 @@
 <h1><%= @league.name %></h1>
 <h1><%= "*" * @league.stars %></h1>
 
+
+<!--Cloudinary-->
+
+<%= cl_image_tag @league.photo.key,
+      width: 400, height: 300, crop: :fill %>
+
 <hr>
 
 <%= link_to "retour sur la liste", leagues_path %>
