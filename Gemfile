@@ -8,6 +8,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
+gem 'devise'
+
 gem 'bootstrap', '~> 4.4.1'
 
 gem 'better_errors'
