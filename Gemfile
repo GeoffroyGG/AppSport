@@ -20,6 +20,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'pg'
 
+gem 'pundit'
+
 gem 'dotenv-rails'
 
 gem 'cloudinary', '~> 1.12.0'
