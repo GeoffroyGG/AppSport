@@ -35,7 +35,10 @@
 
   <div class="exemple">
     <hr>
-    <h1> Bienvenu <%= current_user.email %>  </h1>
+    <% if user_signed_in? %>
+    <h1> Bienvenu <%= current_user.email %>
+      <% end %>
+    </h1>
     <hr>
     <h2> Rejoignez plus de 100 000 joueurs !</h2>
     <hr>
