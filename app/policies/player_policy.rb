@@ -13,8 +13,14 @@ class PlayerPolicy < ApplicationPolicy
     true
   end
 
+  def destroy?
+    if record.user == user || user.admin
+      return true
+    end
+  end
+
   def update?
-    if record.user == user
+    if record.user == user || user.admin
       return true
     end
   end
