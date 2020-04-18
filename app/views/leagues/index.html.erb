@@ -3,8 +3,9 @@
 <hr>
 
 <% @leagues.each do |league| %>
-<h2><%= league.name %></h2>
-<%= "*" * league.stars %>
+<h1><%= league.name %></h1>
+<h3>nombre étoiles : <%= "*" * league.stars %> </h3>
+<h3>addresse de la ligue : <%= league.address %> </h3>
 <%= link_to "Aller voir", league_path(league) %>
 <%= link_to "Supprimer", league_path(league), method: :delete, data: {confirm: "Êtes-vous sur?"} %>
 <%= link_to "Editer", edit_league_path(league) %>
