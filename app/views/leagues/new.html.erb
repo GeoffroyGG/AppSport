@@ -11,6 +11,8 @@
 
   <%= f.label :stars, "How many stars?" %>
   <%= f.number_field :stars%>
+  <%= f.label :address, "Ou votre ligue se situe?" %>
+  <%= f.text_field :address %>
   <%= f.input :photo, as: :file %>
 
   <%= f.submit %>

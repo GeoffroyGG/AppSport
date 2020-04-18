@@ -20,6 +20,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'pg'
 
+gem 'geocoder'
+
 gem 'pundit'
 
 gem 'dotenv-rails'
