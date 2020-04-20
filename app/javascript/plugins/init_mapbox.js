@@ -28,11 +28,13 @@ const fitMapToMarkers = (map, markers) => {
   });
 };
 
+ if (mapElement) {
   const map = buildMap ();
   const markers = JSON.parse(mapElement.dataset.markers);
 
   fitMapToMarkers(map, markers);
-  //addMarkers(map, markers);
+  addMarkers(map, markers);
+   }
 };
 
 export { initMapBox };

@@ -20,6 +20,7 @@ import 'mapbox-gl/dist/mapbox-gl';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loadDynamicBannerText } from '../components/banner';
 import { initMapBox } from '../plugins/init_mapbox';
+import { initAutocomplete } from '../plugins/init_autocomplete'
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
@@ -27,6 +28,7 @@ document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
   loadDynamicBannerText();
   initMapBox();
+  initAutocomplete();
 });
 
 
