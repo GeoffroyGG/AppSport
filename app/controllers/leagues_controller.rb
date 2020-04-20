@@ -2,6 +2,14 @@ class LeaguesController < ApplicationController
   def index
     #@leagues = League.all
     @leagues = policy_scope(League)
+    @leagues = League.geocoded # returns flats with coordinates
+
+    @markers = @leagues.map do |league|
+      {
+        lat: league.latitude,
+        lng: league.longitude
+      }
+    end
   end
 
   def show
