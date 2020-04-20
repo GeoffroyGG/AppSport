@@ -1,37 +1,38 @@
-// import mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 
-// const mapElement = document.getElementById('map');
+const initMapBox = () => {
 
-// const buildMap = () => {
-//   mapboxgl.accessToken = "pk.eyJ1IjoiZ2Fhcml0aCIsImEiOiJjazk1bWpvNjUwNm1wM25xeGR6YWZoN2c2In0.ftIsCu-bpF3ENt2K9a5DAw";
-//   return new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/streets-v10'
-//   });
-// };
+const mapElement = document.getElementById("map");
 
-// const addMarkersToMap = (map, markers) => {
-//   markers.forEach((marker) => {
-//     new mapboxgl.Marker()
-//       .setLngLat([ marker.lng, marker.lat ])
-//       .addTo(map);
-//   });
-// };
 
-// const fitMapToMarkers = (map, markers) => {
-//   const bounds = new mapboxgl.LngLatBounds();
-//   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
-//   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
-// };
+const addMarkersonMap = (map, markers) => {
 
-// const initMapbox = () => {
-//   if (mapElement) {
-//     const map = buildMap();
-//     const markers = JSON.parse(mapElement.dataset.markers);
-//     addMarkersToMap(map, markers);
-//     fitMapToMarkers(map, markers);
-//   }
-// };
+  markers.forEach((marker) => {
+    new mapboxgl.Marker()
+      .setLngLat([ marker.lng, marker.lat ])
+      .addTo(map);
+  });
+};
 
-// export { initMapbox };
+const fitMapToMarkers = (map, markers) => {
+  const bounds = new mapboxgl.LngLatBounds();
+  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  map.fitBounds(bounds, { padding: 70, maxZoom: 12 });
+};
+
+mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+
+  const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11'
+  });
+
+  const markers = JSON.parse(mapElement.dataset.markers);
+
+  fitMapToMarkers(map, markers);
+  //addMarkersonMap(map, markers)
+
+};
+
+export { initMapBox };
 

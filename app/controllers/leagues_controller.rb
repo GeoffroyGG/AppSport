@@ -1,15 +1,15 @@
 class LeaguesController < ApplicationController
   def index
     #@leagues = League.all
-    @leagues = policy_scope(League)
-    @leagues = League.geocoded # returns flats with coordinates
-
+    @leagues = League.geocoded
     @markers = @leagues.map do |league|
       {
         lat: league.latitude,
         lng: league.longitude
       }
     end
+    @leagues = policy_scope(League)
+     # returns flats with coordinates
   end
 
   def show

@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 import 'bootstrap';
+import 'mapbox-gl/dist/mapbox-gl';
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -17,26 +18,16 @@ import 'bootstrap';
 // const imagePath = (name) => images(name, true)
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
-
-document.addEventListener('turbolinks:load', () => {
-  initUpdateNavbarOnScroll();
-});
-
 import { loadDynamicBannerText } from '../components/banner';
+import { initMapBox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
+  initUpdateNavbarOnScroll();
   loadDynamicBannerText();
+  initMapBox();
 });
 
-import mapboxgl from 'mapbox-gl';
 
-document.addEventListener('turbolinks:load', () => {
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZ2Fhcml0aCIsImEiOiJjazk1bWpvNjUwNm1wM25xeGR6YWZoN2c2In0.ftIsCu-bpF3ENt2K9a5DAw';
-const map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
-});
-  mapboxgl();
-});
+
