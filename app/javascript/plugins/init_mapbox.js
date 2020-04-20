@@ -33,7 +33,7 @@ const fitMapToMarkers = (map, markers) => {
   const markers = JSON.parse(mapElement.dataset.markers);
 
   fitMapToMarkers(map, markers);
-  addMarkers(map, markers);
+  //addMarkers(map, markers);
    }
 };
 
