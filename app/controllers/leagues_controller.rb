@@ -9,7 +9,6 @@ class LeaguesController < ApplicationController
       }
     end
     @leagues = policy_scope(League)
-     # returns flats with coordinates
   end
 
   def show
