@@ -23,11 +23,3 @@
   }
 }
 
-{
-  "babel": {      // nest config under "babel"
-    "presets": [
-      "es2015",
-    ],
-    "plugins": ["transform-class-properties"]
-  }
-}
