@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
 League.destroy_all
 Player.destroy_all
 
-League.create(name: 'Call Of Duty', stars: 4)
-League.create(name: 'League Of Legend', stars: 5)
-League.create(name: 'World Of Warcraft', stars: 5)
+League.create(name: 'Call Of Duty', stars: 4, address: "11 rue vaubecour, Lyon")
+League.create(name: 'League Of Legend', stars: 5, address: "113 rue vaubecour, Lyon")
+League.create(name: 'World Of Warcraft', stars: 5, address: "12 rue vaubecour, Lyon")
 
 Player.create(name: 'Tchoob')
 Player.create(name: '100S')

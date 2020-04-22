@@ -1,7 +1,18 @@
     <div class="home-banner">
       <h1>Bet & <p><span id="banner-typed-text"></span></p> </h1>
       <h2>Bienvenue sur la première application pour parier sur les matchs en e-sport </h2>
+        <div class="formgroup">
+          <%= form_tag leagues_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control input",
+          placeholder: "Choisis ton endroit.."
+          %>
+          <% end %>
+        </div>
     </div>
+
+
 
 <div class="container">
 <div class="cards">
