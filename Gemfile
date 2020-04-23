@@ -27,6 +27,8 @@ gem 'geocoder'
 
 gem 'pundit'
 
+gem 'turbolinks_render'
+
 gem 'dotenv-rails'
 
 gem 'cloudinary', '~> 1.12.0'

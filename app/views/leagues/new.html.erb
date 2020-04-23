@@ -4,7 +4,7 @@
 <hr>
 
 <div class="form">
-  <%= simple_form_for @league do |f| %>
+  <%= simple_form_for @league, remote: true do |f| %>
 
   <%= f.label :name, "Your league name" %>
   <%= f.text_field :name %>
